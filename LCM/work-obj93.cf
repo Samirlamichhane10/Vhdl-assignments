@@ -1,0 +1,7 @@
+v 4
+file . "LCM_TB.vhdl" "2e7990d47f24fbab132d32f949ea327dbae10fcd" "20240210135129.330":
+  entity lcm_fsm_tb at 1( 0) + 0 on 45;
+  architecture test of lcm_fsm_tb at 7( 82) + 0 on 46;
+file . "lcm.vhdl" "f6c640902aca7d1f51c9828b0de4729a50c86e36" "20240210135129.140":
+  entity lcm_fsm at 1( 0) + 0 on 43;
+  architecture behaviour of lcm_fsm at 12( 182) + 0 on 44;
