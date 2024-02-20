@@ -1,7 +1,0 @@
-v 4
-file . "mux_tb.vhdl" "46098b3ab403f14f6c917d5b42555d6ca91ce58a" "20240210150100.291":
-  entity multiplexer_tf at 1( 0) + 0 on 13;
-  architecture behavior of multiplexer_tf at 8( 94) + 0 on 14;
-file . "mux.vhdl" "3eb1a77cb43f9a2c3875a46abaafffc38065d47d" "20240210150100.159":
-  entity multiplexer at 1( 0) + 0 on 11;
-  architecture behavioral of multiplexer at 19( 508) + 0 on 12;
