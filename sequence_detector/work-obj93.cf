@@ -1,7 +1,0 @@
-v 4
-file . "seq_det_tb.vhdl" "ce2ee1cec13c56a8dfdfa4bf60bc174080511abb" "20240210041140.650":
-  entity sequence_detector_testbench at 1( 0) + 0 on 33;
-  architecture behavioral of sequence_detector_testbench at 7( 116) + 0 on 34;
-file . "seq_det.vhdl" "f59adcd4f8826c0be48f17e4f8c2f0e309d6e756" "20240210041140.399":
-  entity sequence_detector at 3( 51) + 0 on 31;
-  architecture behavioral of sequence_detector at 16( 321) + 0 on 32;
