@@ -29,3 +29,7 @@ The sequence detector is designed to detect a specific sequence of bits in a str
 
 ## FSM Sequence Detector
 ![sequence detector FSM](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/sequence_detector/sequ.jpg)
+## Sequence Detector Table
+![Table](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/sequence_detector/sequence_.png)
+## Output Waveform
+![Sequence detector Waveform](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/sequence_detector/sequence_detector.png)
