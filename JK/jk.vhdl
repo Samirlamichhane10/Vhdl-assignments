@@ -1,36 +1,28 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
 
-entity JK_Flip_Flop is
-    Port ( J : in  STD_LOGIC;
-           K : in  STD_LOGIC;
-           CLK : in  STD_LOGIC;
-           RST : in  STD_LOGIC;
-           Q : out  STD_LOGIC);
-end JK_Flip_Flop;
+entity jk is
+	port(
+		j, k, clk, reset: in std_logic;
+		q, qo: out std_logic
+	);
+end jk;
 
-architecture Behavioral of JK_Flip_Flop is
-
-signal temp:std_logic:='0';
+architecture behaviour of jk is
 begin
-
-process(RST,CLK,J,K)
-begin
-if(RST='0') then
-TEMP<='0';
-elsif (CLK ='1') then
-if(J='0' and J='0') then
-TEMP<=TEMP;
-elsif(J='0' and J='1') then
-TEMP<='0';
-
-elsif(J='1' and K='0') then
-TEMP<='1';
-else
-TEMP<= not TEMP;
-end if;
-end if;
-end process;
-Q<= TEMP;
-
-end Behavioral;
+	process(j,k,clk,reset)
+	variable output: std_logic := '0';
+	begin
+		if reset = '1' then
+			output := '0';
+		elsif rising_edge(clk) then
+			if j /= k then
+				output := j;
+			elsif j='1' and k='1' then
+				output := not output;
+			end if;
+		end if;
+		q <= output;
+		qo <= not output;
+	end process;
+end behaviour;

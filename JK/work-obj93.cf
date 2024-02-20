@@ -1,7 +1,7 @@
 v 4
-file . "jk_tb.vhdl" "56d210db77db1e79e7fa263d2ab28f38b90feabc" "20240210145252.240":
-  entity jk_flip_flop_tb at 1( 0) + 0 on 13;
-  architecture behavior of jk_flip_flop_tb at 11( 235) + 0 on 14;
-file . "jk.vhdl" "743e64f043ac2babc43b834c69dedefa40a9ccb0" "20240210145252.043":
-  entity jk_flip_flop at 1( 0) + 0 on 11;
-  architecture behavioral of jk_flip_flop at 12( 242) + 0 on 12;
+file . "jk.vhdl" "cad6424e64043541c3ed5e51a5dc7b6bc0dff2be" "20240219171515.856":
+  entity jk at 1( 0) + 0 on 21;
+  architecture behaviour of jk at 11( 134) + 0 on 22;
+file . "jk_tb.vhdl" "4623018a8684ffba56cddf86be4e9d299eb33cc2" "20240219171516.091":
+  entity jk_flip_flop_tb at 1( 0) + 0 on 23;
+  architecture behaviour of jk_flip_flop_tb at 7( 92) + 0 on 24;
