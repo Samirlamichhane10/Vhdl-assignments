@@ -28,4 +28,4 @@ The sequence detector is designed to detect a specific sequence of bits in a str
 
 
 ## FSM Sequence Detector
-[sequence detector FSM](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/sequence_detector/sequ.jpg)
+![sequence detector FSM](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/sequence_detector/sequ.jpg)
