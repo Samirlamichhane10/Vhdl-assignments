@@ -33,7 +33,8 @@ A 4-to-1 multiplexer (MUX) is a combinational circuit that selects one of four i
 
 
 
-## Screenshots
+## Diagram
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Multiplexer diagram](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/mux/mux1.png)
+
 
