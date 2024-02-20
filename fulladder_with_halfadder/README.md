@@ -58,5 +58,6 @@ The HA entity computes the sum (`Sum`) and carry-out (`CarryOut`) based on the i
 
 The FA entity utilizes two instances of the HA entity to compute the sum (`Sum`) and carry-out (`CarryOut`) based on the inputs `A`, `B`, and a carry-in `Cin`.
 
-## Screenshot
-![](link)
+## Implementation Diagram
+![Diagram](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/fulladder_with_halfadder/full-adder-using-half-adder.jpg)
+
