@@ -24,7 +24,10 @@ The provided testbench stimulates the GCD calculator with two input numbers: 41 
 
 
 
-## Screenshots
+## FSM of GCD
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![GCD-FSM](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/GCD/lab2_gcd.png)
+
+## Waveform 
+![GCD-waveform](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/GCD/GCD.png)
 
