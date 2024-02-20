@@ -41,6 +41,14 @@ The full adder performs binary addition of three input bits (A, B, and Cin). It 
 | 1 | 1 | 0   | 0 | 1    |
 | 1 | 1 | 1   | 1 | 1    |
 
+## FSM and Circuit Diagram of full adder
+
+![FSM](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/full_adder/FSM.png)
+![ckt](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/full_adder/fulladder.jpeg)
+
+## Waveform
+
+![Waveform](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/full_adder/full_adder.png)
 
 
 
