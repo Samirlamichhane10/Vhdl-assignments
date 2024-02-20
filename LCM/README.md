@@ -35,7 +35,7 @@ The FSM has the following states:
 - output: Outputs the calculated LCM.
 - others: Default state, returns to the start state.
 
-## Screenshots
+## Waveform
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![LCM_Waveform](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/LCM/lcm.png)
 
