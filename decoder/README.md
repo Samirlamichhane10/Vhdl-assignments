@@ -31,5 +31,9 @@ The decoder translates binary input combinations into specific output patterns. 
 - For input "10", the output `Y` is "0100".
 - For any other input combination, the output `Y` is "1000".
 
-## Screenshots
+## Circuit Diagram 
+![decoder-circuit-diagram](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/decoder/decoder1.JPG.jpg)
+
+## Waveform
+![decoder-waveform](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/decoder/decoder.png)
 
