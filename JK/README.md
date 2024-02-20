@@ -29,7 +29,11 @@ The provided testbench stimulates the JK Flip Flop with various input combinatio
 2. J=0, K=1: This input combination forces flip flop to reset, resulting in Q=0 and Q̅=1. It is often referred to as the “reset” state.
 3. J=1, K=0: Here, flip flop resides in the set mode, causing Q=1 and Q̅=0. It is known as the “set” state.
 4. J=1, K=1: This combination toggles flip flop. If the previous state is Q=0, it switches to Q=1 and vice versa. This makes it valuable for frequency division and data storage applications.
-## Screenshots
+## FSM of JK flip flop 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![FSM JK](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/JK/Fig1-JK-flipflop-State-Machine1.png)
+![Transition](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/JK/jkff.png)
 
+## Waveform 
+
+![Waveform](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/JK/jk.png)
