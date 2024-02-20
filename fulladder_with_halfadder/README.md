@@ -60,4 +60,5 @@ The FA entity utilizes two instances of the HA entity to compute the sum (`Sum`)
 
 ## Implementation Diagram
 ![Diagram](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/fulladder_with_halfadder/full-adder-using-half-adder.jpg)
-
+## Output Waveform
+![Output Waveform](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/fulladder_with_halfadder/fulladder%20using%20half%20new.png)
