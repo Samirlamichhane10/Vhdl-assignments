@@ -1,7 +1,6 @@
+# Full Adder Implementation Using Half Adders
 
-# Full Adder Implementation with Half Adders in VHDL
-
-This repository contains VHDL files for a Full Adder (FA) entity implemented using Half Adders (HA).
+This repository contains VHDL files for a Full Adder entity implemented using Half Adders.
 
 ## Files
 
@@ -13,32 +12,23 @@ This repository contains VHDL files for a Full Adder (FA) entity implemented usi
 
 - **fa_tb.vhdl**: Testbench for the Full Adder entity.
 
-## ScreenShot
-[waveform] (link)
-
 ## Usage
 
 1. **Compilation**: Use a VHDL compiler (e.g., GHDL) to compile the VHDL files. For example:
-   ```
-   ghdl -a ha.vhdl
-   ghdl -a fa.vhdl
-   ghdl -a ha_tb.vhdl
-   ghdl -a fa_tb.vhdl
-   ```
+ghdl -a ha.vhdl
+ghdl -a fa.vhdl
+ghdl -a ha_tb.vhdl
+ghdl -a fa_tb.vhdl
 
 2. **Elaboration**: Once compiled, elaborate the entities:
-   ```
-   ghdl -e HA
-   ghdl -e FA
-   ghdl -e HA_TB
-   ghdl -e FA_TB
-   ```
+ghdl -e HA
+ghdl -e FA
+ghdl -e HA_TB
+ghdl -e FA_TB
 
 3. **Simulation**: Run the simulation using the testbenches:
-   ```
-   ghdl -r HA_TB
-   ghdl -r FA_TB
-   ```
+ghdl -r HA_TB
+ghdl -r FA_TB
 
 4. **View Results**: Analyze the simulation results to verify the functionality of the HA and FA components.
 
@@ -58,5 +48,15 @@ This repository contains VHDL files for a Full Adder (FA) entity implemented usi
 
 ## Testbenches
 
-- **ha_tb.vhdl**: Testbench for the Ha
+- **ha_tb.vhdl**: Testbench for the Half Adder (`HA`) entity. Provides stimuli to the HA entity and verifies its functionality.
 
+- **fa_tb.vhdl**: Testbench for the Full Adder (`FA`) entity. Provides stimuli to the FA entity and verifies its functionality.
+
+## Design Description
+
+The HA entity computes the sum (`Sum`) and carry-out (`CarryOut`) based on the inputs `A` and `B`. 
+
+The FA entity utilizes two instances of the HA entity to compute the sum (`Sum`) and carry-out (`CarryOut`) based on the inputs `A`, `B`, and a carry-in `Cin`.
+
+## Screenshot
+![](link)
