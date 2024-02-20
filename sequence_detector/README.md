@@ -27,4 +27,5 @@ The provided testbench stimulates the sequence detector with various input seque
 The sequence detector is designed to detect a specific sequence of bits in a stream of input data. It operates based on a finite-state machine (FSM) architecture, transitioning between states based on the input data received.
 
 
-
+## FSM Sequence Detector
+[sequence detector FSM](https://github.com/Samirlamichhane10/Vhdl-assignments/blob/main/sequence_detector/sequ.jpg)
