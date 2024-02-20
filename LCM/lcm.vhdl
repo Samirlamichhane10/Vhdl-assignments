@@ -1,56 +1,62 @@
-library ieee;
+library  ieee;
 use ieee.std_logic_1164.all;
 
-entity lcm_fsm is
-    Port (
-        rst, clk : in std_logic;
-        n1, n2 : in integer;
-        lcm : out integer
-    );
-end lcm_fsm;
+entity lcm is
+	port(RESET, CLK : in std_logic;
+	    a, b : in integer;
+	    lcm_result : out integer
+    	);
+end lcm;
 
-architecture behaviour of lcm_fsm is
-    type state is (S, IP, C, UX, UY, OP); -- start, input, check, updatex, updatey, output
-    signal ps, ns : state;
+architecture behavior of lcm is
+	type state is (start, input, output, check, check1, updatex,  updatey);
+	signal current_state, next_state: state;
 begin
-    seq_proc : process(clk, rst)
-    begin
-        if rst = '1' then
-            ps <= S;
-        elsif rising_edge(clk) then
-            ps <= ns;
-        end if;
-    end process seq_proc;
-
-    comb_proc: process(n1, n2, ps)
-        variable x, y, z : integer;
-    begin
-        case ps is
-            when S =>
-                lcm <= 0;
-                ns <= IP;
-            when IP =>
-                x := n1;
-                y := n2; -- Fixed typo n1 should be assigned to y
-                z := x * y;
-                ns <= C;
-            when C =>
-                if x > y then
-                    ns <= UX;
-                elsif x < y then
-                    ns <= UY;
-                else
-                    ns <= OP;
-                end if;
-            when UX =>
-                x := x - y;
-                ns <= C;
-            when UY =>
-                y := y - x;
-                ns <= C;
-            when OP =>
-                lcm <= z / x;
-                ns <= S;
-        end case;
-    end process comb_proc;
-end behaviour;
+	state_register:process(CLK, RESET)
+	begin
+		if(RESET = '1') then
+			current_state <= start;
+		elsif(rising_edge(CLK)) then
+			current_state <= next_state;
+		end if;
+	end process;
+	compute:process(a, b, current_state)
+	variable  z, x, y, r, p : integer;
+	begin
+		case current_state is 
+			when start =>
+				next_state <= input;
+			when input =>
+				x:= a;
+				y:= b;
+				z := x * y;
+				next_state <= check;
+			when check =>
+				if(x< y) then
+					next_state <= updatex;
+				else
+					next_state <= updatey;
+				end if;
+				next_state <= check1;
+			when  check1 =>
+				while y /= 0 loop
+					r:= x mod y;
+					x:= y;
+					y:= r;
+				end loop;
+				next_state <= output;
+			when updatex =>
+				p:=x;
+				x:=y;
+				y:=p;
+			when updatey =>
+				x:=x;
+				y:=y;
+			when output =>
+				lcm_result <= z / x;	
+				next_state <= start;
+			when others =>
+				next_state <= start;
+		end case;
+	end process compute;
+end behavior;

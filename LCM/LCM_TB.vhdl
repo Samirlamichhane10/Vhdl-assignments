@@ -1,67 +1,42 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity lcm_fsm_tb is
-end lcm_fsm_tb;
+entity LCM_TB  is 
+end LCM_TB;
 
-architecture test of lcm_fsm_tb is
-    signal rst, clk : std_logic;
-    signal n1, n2, lcm : integer;
-
-    component lcm_fsm
-        Port (
-            rst, clk : in std_logic;
-            n1, n2 : in integer;
-            lcm : out integer
-        );
-    end component;
-
+architecture behavior of lcm_tb is 
+       	signal CLK, RESET: std_logic;
+	signal a, b, lcm_result: integer;
+	
 begin
-    lcm_fsm_inst: lcm_fsm port map(rst => rst, clk => clk, n1 => n1, n2 => n2, lcm => lcm);
+	dut : entity work.lcm port map(CLK => CLK, RESET =>  RESET, a => a, b => b, lcm_result => lcm_result);
+	clock: process
+	begin
+		CLK<= '1';
+		wait for 100 ns;
+	
+		CLK <= '0';
+		wait for 100 NS;
+	
+	end process;
+	process
+	begin
+		RESET <= '1';
+		wait for 10 ns;
+		RESET <= '0';
+		wait for 10 ns;
+		a <= 12;
+		b <= 9;
+		wait for 100 ns;
 
-    process
-    begin
-        -- Initialize signals
-        rst <= '1';
-        clk <= '0';
-        n1 <= 0;
-        n2 <= 0;
+		a <= 7;
+		b <= 5;
+		wait for 100 ns;
+	
+		a <= 12;
+		b <= 5;
+		wait for 100 ns;
 
-        wait for 500 ms;
-
-        -- Release reset and apply inputs
-        rst <= '0';
-        n1 <= 4;
-        n2 <= 6;
-
-        wait for 1 us;
-        clk <= '1';
-        wait for 1 us;
-        clk <= '0';
-
-        wait for 500 ms;
-
-        -- Apply different inputs
-        n1 <= 8;
-        n2 <= 12;
-
-        wait for 1 us;
-        clk <= '1';
-        wait for 1 us;
-        clk <= '0';
-
-        wait for 500 ms;
-
-        -- Apply more inputs
-        n1 <= 15;
-        n2 <= 25;
-
-        wait for 1 us;
-        clk <= '1';
-        wait for 1 us;
-        clk <= '0';
-
-        wait;
-
-    end process;
-end test;
+		wait;
+	end process;
+end behavior;
